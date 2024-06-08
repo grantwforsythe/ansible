@@ -8,5 +8,5 @@
         - zsh
         - node
   tasks:
-    - includes: zsh.yml
-    - includes: node.yml
+    - includes: tasks/zsh.yml
+    - includes: tasks/node.yml
