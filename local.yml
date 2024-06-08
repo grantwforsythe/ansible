@@ -9,5 +9,5 @@
         - node
   tasks:
     - include: tasks/zsh.yml
-    - include: tasks/node.yml
     - include: tasks/dotfiles.yml
+    - include: tasks/node.yml
