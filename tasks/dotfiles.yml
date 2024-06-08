@@ -8,7 +8,7 @@
   ansible.builtin.git:
     repo: 'https://github.com/grantwforsythe/dotfiles.git'
     dest: "{{ lookup('env', 'HOME')}}/dotfiles"
-    version: master
+    version: main
     update: true
   tags:
     - install
