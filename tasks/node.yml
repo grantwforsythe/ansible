@@ -1,14 +1,10 @@
-- name: Install nvm
-  ansible.builtin.shell: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-  args:
-    creates: "{{ ansible_env.HOME }}/.nvm/nvm.sh"
+- name: Install unzip
+  apt: unzip
   tags:
+    - install
     - node
-- name: Install node version 20.14.0
-  shell: nvm install 20.14.0
+- name: Install fnm
+  shell: curl -fsSL https://fnm.vercel.app/install | bash --skip-shell
   tags:
-    - node
-- name: Use the downloaded version of node
-  shell: nvm use 20.14.0
-  tags:
+    - install
     - node

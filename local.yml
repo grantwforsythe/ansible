@@ -12,3 +12,4 @@
     - include: tasks/dotfiles.yml
     - include: tasks/nvim.yml
     - include: tasks/core.yml
+    - include: tasks/node.yml
