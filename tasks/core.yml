@@ -1,6 +1,6 @@
 - name: Install packages
   become: true
   apt:
-    name: ["tmux", "fzf"]
+    name: ["xclip", "fzf", "tldr", "ripgrep"]
   tags:
     - intall
