@@ -13,3 +13,4 @@
     - include: tasks/nvim.yml
     - include: tasks/core.yml
     - include: tasks/tmux.yml
+    - include: tasks/i3.yml

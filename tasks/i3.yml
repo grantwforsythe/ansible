@@ -1,0 +1,5 @@
+- name: Install i3
+  apt: ["i3", "rofi"]
+  tags:
+    - install
+    - i3
