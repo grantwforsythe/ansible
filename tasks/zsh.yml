@@ -1,29 +1,43 @@
 - name: Install ZSH
   apt: name=zsh
   tags:
+    - install
     - zsh
+
 - name: Change shell
   shell: chsh -s `which zsh`
   tags:
     - zsh
+
 - name: Install ohmyzsh
   shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   tags:
+    - install
     - zsh
+
+- name: Remove zsh
+  shell: rm -rf ~/.zshrc
+  tags:
+    - zsh
+
 - name: Install zsh-autosuggestions
   ansible.builtin.git:
     repo: 'https://github.com/zsh-users/zsh-autosuggestions.git'
     dest: '~/.oh-my-zsh/plugins/zsh-autosuggestions'
   tags:
-    - zsh
-- name: Remove zsh
-  shell: rm -rf ~/.zshrc
-  tags:
     - install
     - zsh
+
 - name: Install zsh-syntax-highlighting
   ansible.builtin.git:
     repo: 'https://github.com/zsh-users/zsh-syntax-highlighting.git'
     dest: '~/.oh-my-zsh/plugins/zsh-syntax-highlighting'
   tags:
+    - install
+    - zsh
+
+- name: Install Starship
+  shell: curl -sS https://starship.rs/install.sh | sh
+  tags:
+    - install
     - zsh
